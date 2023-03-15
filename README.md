@@ -1,3 +1,21 @@
+# Maarten here!
+Below I kept the original readme from PatrickAlpha
+This project includes a dynamic and a random NFT
+Firstly though, I want to exclude these and only use the 
+mint basic NFT functionality.
+
+I installed this by cloning the project from github.
+```gh repo clone PatrickAlphaC/hardhat-nft-fcc```
+ then
+ ```yarn```
+ then fill in all the env's and:
+ ```yarn hardhat deploy.
+
+ 
+
+
+
+
 # The Ultimate NFT Repo
 
 *[⌨️ (20:28:51) Lesson 14: Hardhat NFTs ](https://www.youtube.com/watch?v=gyMwXuJrbJQ&t=73731s)*
@@ -178,3 +196,4 @@ ETH/Polygon/Avalanche/etc Address: 0x9680201d9c93d65a3603d2088d125e955c73BD65
 [![Patrick Collins Medium](https://img.shields.io/badge/Medium-000000?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@patrick.collins_58673/)
 
 
+# NFT-creation
