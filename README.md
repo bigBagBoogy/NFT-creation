@@ -9,7 +9,7 @@ I installed this by cloning the project from github.
  then
  ```yarn```
  then fill in all the env's and:
- ```yarn hardhat deploy.
+ ```yarn hardhat deploy.```
 
  
 
