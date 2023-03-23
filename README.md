@@ -26,6 +26,11 @@ also, I want to add polygon to the options
 I already have a polygonscan api added to .env
 
 
+
+added script in package.json "sepolia".  it will do:
+yarn hardhat deploy --network sepolia   if you type: yarn sepolia
+
+
  
 
  

@@ -4,8 +4,8 @@ const path = require("path")
 
 // bigBagBoogie: this file has two functions that are not
 // called here, but exported (at the bottom).
-// They are not imported anywhere in this project however...
-// AHA!! They ARE imported! In the 03-deploy-random-ipfs-nft script!
+
+//They ARE imported! In the pinata.js script!
 
 const pinataApiKey = process.env.PINATA_API_KEY || ""
 const pinataApiSecret = process.env.PINATA_API_SECRET || ""
