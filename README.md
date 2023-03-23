@@ -11,11 +11,28 @@ I installed this by cloning the project from github.
  then fill in all the env's and:
  ```yarn hardhat deploy.```
 
+ in utils/uploadToPinata.js this only works with a deploy script!!
+ I altered it to be just a regular script. It's called pinata.js
+So currently we have utils/uploadToPinata.js and pinata.js
+These two get the files to IPFS by 
+calling (CLI) yarn hardhat run scripts/pinata.js
+
+the link you get out of that is what I now fill in manually
+in the contracts/BasicNft.sol. + don't forget to change
+the name and token-name!!!
+deploying to goerli does't work too well anymore.
+
+also, I want to add polygon to the options
+I already have a polygonscan api added to .env
+
+
+ 
+
  
 
 
 
-
+.........................................................................
 # The Ultimate NFT Repo
 
 *[⌨️ (20:28:51) Lesson 14: Hardhat NFTs ](https://www.youtube.com/watch?v=gyMwXuJrbJQ&t=73731s)*
