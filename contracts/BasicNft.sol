@@ -5,10 +5,10 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
 contract BasicNft is ERC721 {
     string public constant TOKEN_URI =
-        "https://ipfs.io/ipfs/QmcjV7TksBexzqGAFpVZKGTbVpgW78hH3Mce3eCMFQuBJv";
+        "https://gateway.pinata.cloud/ipfs/QmQGstYeKrHWegs8LZXYxiFiE1SxuY4YiA2gygANw5NKwu";
     uint256 private s_tokenCounter;
 
-    constructor() ERC721("bigBagBoogie", "MAARTEN") {
+    constructor() ERC721("invader-space", "INVADER") {
         s_tokenCounter = 0;
     }
 

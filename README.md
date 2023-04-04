@@ -11,26 +11,38 @@ I installed this by cloning the project from github.
  then fill in all the env's and:
  ```yarn hardhat deploy.```
 
- in utils/uploadToPinata.js this only works with a deploy script!!
- I altered it to be just a regular script. It's called pinata.js
+# Uploading to IPFS in utils/uploadToPinata.js 
+This works with a script!!
+- start the frontend with "yarn server"
+It's called pinata.js
+- add a png in ./images
+- alter the hardcoded attributes and intrapolation
 So currently we have utils/uploadToPinata.js and pinata.js
 These two get the files to IPFS by 
-calling (CLI) yarn hardhat run scripts/pinata.js
+calling (CLI) yarn pinata
+
+add:    https://gateway.pinata.cloud/  to the token URI!
 
 the link you get out of that is what I now fill in manually
 in the contracts/BasicNft.sol. + don't forget to change
 the name and token-name!!!
-deploying to goerli does't work too well anymore.
+- added script in package.json "sepolia".  it will do:
+yarn hardhat deploy --network sepolia   if you type: yarn sepolia
+deploying to goerli does't work too well anymore: "Done in 1567.13s."
 
 also, I want to add polygon to the options
 I already have a polygonscan api added to .env
 
 
 
-added script in package.json "sepolia".  it will do:
-yarn hardhat deploy --network sepolia   if you type: yarn sepolia
 
-
+git init
+git add .
+git status
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/bigBagBoogy/multer-img-upload.git
+git push -u origin main
  
 
  

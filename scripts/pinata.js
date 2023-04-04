@@ -1,7 +1,7 @@
 const { network } = require("hardhat")
 const { storeImages, storeTokenUriMetadata } = require("../utils/uploadToPinata")
 
-const imagesLocation = "./images/randomNft/" // = subfolder!?
+const imagesLocation = "./images/" // = subfolder!?
 // the way this script is written currently it only accepts png's
 let tokenUris = []
 
@@ -12,8 +12,8 @@ const metadataTemplate = {
     attributes: [
         // these attributes below are hardcoded!😔
         {
-            trait_type: "Boogyness",
-            value: 500,
+            trait_type: "Spacyness",
+            value: 5000,
         },
     ],
 }
@@ -25,7 +25,7 @@ async function handleTokenUris() {
     for (imageUploadResponseIndex in imageUploadResponses) {
         let tokenUriMetadata = { ...metadataTemplate }
         tokenUriMetadata.name = files[imageUploadResponseIndex].replace(".png", "")
-        tokenUriMetadata.description = `bigBag ${tokenUriMetadata.name} Boogy!`
+        tokenUriMetadata.description = `Space floatin' ${tokenUriMetadata.name} NFT!`
         tokenUriMetadata.image = `ipfs://${imageUploadResponses[imageUploadResponseIndex].IpfsHash}`
         console.log(`Uploading ${tokenUriMetadata.name}...`)
         const metadataUploadResponse = await storeTokenUriMetadata(tokenUriMetadata)
