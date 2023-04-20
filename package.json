@@ -37,7 +37,7 @@
     "format": "prettier --write .",
     "sepolia": "yarn hardhat deploy --network sepolia",
     "goerli": "yarn hardhat deploy --network goerli",
-    "pinata": "yarn hardhat run scripts/pinata.js",
+    "pinata": "yarn hardhat run view/pinata.js",
     "server": "yarn hardhat run index.js"
   }
 }

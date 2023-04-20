@@ -1,9 +1,14 @@
 const { network } = require("hardhat")
 const { storeImages, storeTokenUriMetadata } = require("../utils/uploadToPinata")
 
-const imagesLocation = "./images/" // = subfolder!?
-// the way this script is written currently it only accepts png's
+const imagesLocation = "./images/" // = subfolder!?   the way this script is written currently it only accepts png's
 let tokenUris = []
+const pinataButton = select("#pinata")
+function setup() {
+    noCanvas()
+    console.log("script connected!")
+    pinataButton.mousePressed(handleTokenUris)
+}
 
 const metadataTemplate = {
     name: "",
@@ -37,13 +42,3 @@ async function handleTokenUris() {
 }
 
 module.exports.tags = ["all", "randomipfs", "main"]
-
-// "ipfs://QmaVkBn2tKmjbhphU7eyztbvSQU5EXDdqRyXZtRhSGgJGo",
-// "ipfs://QmYQC5aGZu2PTH8XzbJrbDnvhj3gVs7ya33H9mqUNvST3d",
-// "ipfs://QmZYmH5iDbD6v3U2ixoVAjioSzvWJszDzYdbeCLquGSpVm",
-
-// const imageUris = [
-//     "ipfs://QmSsYRx3LpDAb1GZQm7zZ1AuHZjfbPkD6J7s9r41xu1mf8",
-//     "ipfs://QmYx6GsYAKnNzZ9A6NvEKV9nf1VaDzJrqDR23Y8YSkebLU",
-//     "ipfs://QmUPjADFGEKmfohdTaNcWhp7VGk26h5jXDA7v3VtTnTLcW",
-// ]

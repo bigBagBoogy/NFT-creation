@@ -14,9 +14,9 @@ I installed this by cloning the project from github.
 # Uploading to IPFS in utils/uploadToPinata.js 
 This works with a script!!
 - start the frontend with "yarn server"
-It's called pinata.js
+It's called pinata.js in "view" folder!!! view/pinata.js
 - add a png in ./images
-- alter the hardcoded attributes and intrapolation
+- alter the hardcoded attributes and intrapolation (from line 27)
 So currently we have utils/uploadToPinata.js and pinata.js
 These two get the files to IPFS by 
 calling (CLI) yarn pinata
@@ -26,6 +26,11 @@ add:    https://gateway.pinata.cloud/  to the token URI!
 the link you get out of that is what I now fill in manually
 in the contracts/BasicNft.sol. + don't forget to change
 the name and token-name!!!
+# new! +++ adding the URI as a variable... +++
+The way to ad the URI without hardcoding it is through
+arguments in the deploy script. Add the variable above the
+"log-line" and then add this as an argument to the constructor
+(below the "log-line")
 - added script in package.json "sepolia".  it will do:
 yarn hardhat deploy --network sepolia   if you type: yarn sepolia
 deploying to goerli does't work too well anymore: "Done in 1567.13s."
@@ -41,7 +46,7 @@ git add .
 git status
 git commit -m "first commit"
 git branch -M main
-git remote add origin https://github.com/bigBagBoogy/multer-img-upload.git
+git remote add origin https://github.com/bigBagBoogy/NFT-creation.git
 git push -u origin main
  
 
@@ -62,7 +67,7 @@ git push -u origin main
 <p align="center">
 <img src="./images/randomNft/pug.png" width="225" alt="NFT Pug">
 <img src="./images/dynamicNft/happy.svg" width="225" alt="NFT Happy">
-<img src="./images/randomNft/shiba-inu.png" width="225" alt="NFT Shiba">
+<img src=".//randomNft/shiba-inu.png" width="225" alt="NFT Shiba">
 <img src="./images/dynamicNft/frown.svg" width="225" alt="NFT Frown">
 <img src="./images/randomNft/st-bernard.png" width="225" alt="NFT St.Bernard">
 </p>
